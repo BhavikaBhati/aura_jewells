@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AURA JEWELLS</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F7EFE3;--cd:#fff;--tx:#2b1013;--mu:#7a5c60;--ch:#320912;--burg:#5A1020;--au:#C9A227;--ln:#e8dcc4}
+:root[data-theme=dark]{--bg:#1a0810;--cd:#2a0f18;--tx:#f7efe3;--mu:#c9a9ad;--ch:#140508;--burg:#7a1b30;--au:#dcb843;--ln:#43202a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px Inter,system-ui,sans-serif;transition:background .2s,color .2s}
+h1,h2,h3,.logotype{font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:0 0 .5em}a{color:inherit;text-decoration:none}
+.bar{background:var(--au);color:#2b1013;text-align:center;font-size:12px;padding:6px}
+header{background:var(--ch);color:#fff;position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;gap:14px;padding:10px 20px;max-width:1280px;margin:auto;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:40px;width:40px;border-radius:50%}
+.logotype{font-size:21px;letter-spacing:3px;color:var(--au);margin:0}
+.links{display:flex;gap:13px;flex:1;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;flex-wrap:wrap}.links a:hover{color:var(--au)}
+.ic{display:flex;gap:12px;align-items:center}#mb{display:none;background:0;border:0;color:#fff;font-size:22px;margin-left:auto}
+#tt{background:0;border:1px solid #6b3340;color:#fff;border-radius:20px;padding:4px 10px;cursor:pointer;font-size:13px}
+@media(max-width:860px){#mb{display:block}.links,.ic{display:none;width:100%}.open .links,.open .ic{display:flex}}
+main{max-width:1280px;margin:auto;padding:24px 20px;min-height:70vh;animation:f .5s}@keyframes f{from{opacity:0;transform:translateY(8px)}}
+.hero{background:linear-gradient(135deg,var(--ch),var(--burg));color:#fff;text-align:center;padding:80px 20px 60px}.hero h1{font-size:clamp(30px,6.5vw,58px);letter-spacing:3px}
+.coupon{display:inline-flex;align-items:center;gap:10px;background:#fff1;border:1px dashed var(--au);color:#fff;padding:8px 16px;border-radius:30px;margin-top:18px;font-size:13px;flex-wrap:wrap;justify-content:center}
+.coupon b{color:var(--au);letter-spacing:1px}
+.btn{display:inline-block;background:var(--ch);color:#fff;border:1px solid var(--au);padding:10px 22px;letter-spacing:1px;font-size:13px;cursor:pointer;transition:.2s;font-family:inherit}
+.btn:hover,.btn.g{background:var(--au);color:#2b1013}.btn.s{padding:6px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}@media(max-width:520px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--cd);border:1px solid var(--ln);padding:14px;transition:.25s;position:relative}.card:hover{transform:translateY(-4px);box-shadow:0 8px 22px #0003}
+.img{aspect-ratio:1;display:grid;place-items:center;font-size:64px;background:linear-gradient(135deg,#f3e3c6,#e3c08f);margin-bottom:10px;overflow:hidden;border-radius:2px}
+.img img{width:100%;height:100%;object-fit:cover}
+.qv{position:absolute;top:20px;right:20px;background:var(--ch);color:#fff;border:0;border-radius:50%;width:30px;height:30px;cursor:pointer;opacity:0;transition:.2s}
+.card:hover .qv{opacity:1}
+.mu{color:var(--mu);font-size:13px}.sec{margin:44px 0 16px;text-align:center}
+.strike{text-decoration:line-through;color:var(--mu);font-size:12.5px;margin-right:6px}
+.salep{color:var(--burg);font-weight:600}
+table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid var(--ln);text-align:left}
+.box{background:var(--cd);border:1px solid var(--ln);padding:18px;margin-bottom:16px;overflow-x:auto}
+input,select,textarea{padding:9px;border:1px solid var(--ln);font:inherit;max-width:100%;background:var(--cd);color:var(--tx)}
+.f{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.form{display:grid;gap:10px;max-width:420px}
+.up{color:#2e8b57}.dn{color:#c0392b}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:700px){.two{grid-template-columns:1fr}}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center}
+footer{background:var(--ch);color:#dcc9cc;text-align:center;padding:30px 20px;font-size:13px}
+footer a:hover{color:var(--au)}
+.badge{position:absolute;top:10px;left:10px;background:var(--ch);color:var(--au);font-size:10px;letter-spacing:1px;padding:3px 8px;z-index:1}
+.badge.sale{background:var(--burg)}
+.modal{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:20;padding:20px}
+.modal>div{background:var(--cd);max-width:640px;width:100%;padding:22px;max-height:90vh;overflow:auto;position:relative}
+.close{position:absolute;top:10px;right:14px;cursor:pointer;font-size:20px}
+.thumbs{display:flex;gap:6px;margin-top:6px}.thumbs .img{width:44px;height:44px;font-size:20px;cursor:pointer;border:1px solid var(--ln)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.faq summary{cursor:pointer;font-weight:600;padding:10px 0;border-bottom:1px solid var(--ln)}
+.faq p{color:var(--mu);padding:8px 0}
+details.faq{margin-bottom:4px}
+</style></head><body>
+<div class="bar">Complimentary Shipping on Orders Above ₹25,000 · Demo project</div>
+<header id="hd"><div class="nav">
+<a class=brand href="#/"><img src="/images/logo.png" alt="AURA JEWELLS logo"><span class=logotype>AURA JEWELLS</span></a>
+<button id="mb" onclick="hd.classList.toggle('open')">☰</button>
+<nav class="links"><a href="#/">Home</a><a href="#/categories">All Categories</a><a href="#/shop/all">Jewellery</a><a href="#/shop/gold">Gold</a><a href="#/shop/silver">Silver</a><a href="#/shop/diamond">Diamond</a><a href="#/shop/gemstone">Gemstone</a><a href="#/shop/wedding">Wedding</a><a href="#/shop/mens">Men's</a><a href="#/shop/kids">Kids</a><a href="#/offers">New & Offers</a><a href="#/prices">Live Prices</a><a href="#/book">Book Gold</a><a href="#/gold">My Gold</a><a href="#/redeem">Redeem</a><a href="#/customize">Customize Order</a><a href="#/about">About</a></nav>
+<div class="ic"><input id="sq" placeholder="Search" size="9" onkeydown="if(event.key=='Enter'){F.q=this.value;location.hash='#/shop/all'}"><button id=tt onclick="toggleTheme()">☾/☀</button><a href="#/wish">♡<span id="wc"></span></a><a href="#/acct" id="ac">Account</a><a href="#/cart">🛍<span id="cc"></span></a></div></div></header>
+<main id="app"></main>
+<div id="qvbox"></div>
+<footer><div class=logotype style="color:var(--au)">AURA JEWELLS</div><p>Timeless Beauty. Modern Elegance.</p>
+<p><a href="#/about">About</a> · <a href="#/contact">Contact</a> · <a href="#/service">Customer Service</a> · <a href="#/appointment">Book Appointment</a> · <a href="#/care">Jewellery Care Guide</a> · <a href="#/ringsize">Ring Size Guide</a> · <a href="#/customize">Customize Your Order</a></p>
+<p><a href="#/privacy">Privacy Policy</a> · <a href="#/terms">Terms & Conditions</a> · <a href="#/admin" style="color:var(--au)">Admin</a></p>
+<p>AURA JEWELLS, Mumbai · Phone: 9665118022 · Email: bhavikabhati04@gmail.com · Hours: 11:00 AM – 9:00 PM</p></footer>
+<script>
+const $=s=>document.querySelector(s),fmt=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const PU={24:'24K Gold',22:'22K Gold',18:'18K Gold',S:'Sterling Silver'},IC={ring:'💍',necklace:'📿',earrings:'✨',bracelet:'⛓',bangle:'⭕',chain:'🔗',anklet:'🔔'};
+const CAT_LABEL={gold:'Gold',silver:'Silver',diamond:'Diamond',gemstone:'Gemstone'};
+const CATS=[
+ {k:'all',label:'All Jewellery',f:p=>true},
+ {k:'gold',label:'Gold',f:p=>p.cat=='gold'},
+ {k:'silver',label:'Silver',f:p=>p.cat=='silver'},
+ {k:'diamond',label:'Diamond',f:p=>p.cat=='diamond'},
+ {k:'gemstone',label:'Gemstone',f:p=>p.cat=='gemstone'},
+ {k:'earrings',label:'Earrings',f:p=>p.type=='earrings'},
+ {k:'rings',label:'Rings',f:p=>p.type=='ring'},
+ {k:'necklaces',label:'Necklaces',f:p=>p.type=='necklace'},
+ {k:'chains',label:'Chains',f:p=>p.type=='chain'},
+ {k:'bangles',label:'Bangles',f:p=>p.type=='bangle'},
+ {k:'bracelets',label:'Bracelets',f:p=>p.type=='bracelet'},
+ {k:'anklets',label:'Anklets',f:p=>p.type=='anklet'},
+ {k:'wedding',label:'Wedding / Bridal',f:p=>!!p.wedding},
+ {k:'gifting',label:'Gifting',f:p=>!!p.gifting},
+ {k:'mens',label:"Men's Jewellery",f:p=>!!p.mens},
+ {k:'kids',label:'Kids Jewellery',f:p=>!!p.kids},
+ {k:'daily',label:'Daily Wear',f:p=>!!p.daily_wear},
+ {k:'under50k',label:'Under ₹50,000',f:p=>p.price<50000},
+ {k:'new',label:'New Arrivals',f:p=>!!p.new_arrival},
+ {k:'featured',label:'Featured Collection',f:p=>!!p.featured},
+];
+const catByKey=k=>CATS.find(c=>c.k==k)||CATS[0];
+let U=null,P=[],R={},H={},UPD='',cart=JSON.parse(localStorage.ac||'{}'),wl=JSON.parse(localStorage.aw||'[]'),F={q:'',type:'',pr:'',st:'',so:''},ck='22',cn=30,adm='dash',coupon='';
+document.documentElement.setAttribute('data-theme',localStorage.theme||'light');
+function toggleTheme(){let t=document.documentElement.getAttribute('data-theme')=='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',t);localStorage.theme=t}
+const api=async(u,b,method)=>{let o=b?{method:method||'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}:(method?{method}:{});let r=await fetch('/api/'+u,o),j=await r.json();if(!r.ok)throw j.error||'Error';return j};
+const run=async f=>{try{await f()}catch(e){toast(e)}};
+const toast=t=>{let d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ch);color:var(--au);padding:10px 20px;z-index:30;border-radius:4px';document.body.append(d);setTimeout(()=>d.remove(),1800)};
+const sv=()=>{localStorage.ac=JSON.stringify(cart);localStorage.aw=JSON.stringify(wl)};
+const pd=c=>P.find(p=>p.code==c),thumb=p=>p.image?`<img src="${p.image}" onerror="this.replaceWith(document.createTextNode('${IC[p.type]||'💎'}'))">`:(IC[p.type]||'💎');
+function priceBlock(p){return p.on_sale&&p.sale_price?`<span class=strike>${fmt(p.original)}</span><span class=salep>${fmt(p.price)}</span>`:fmt(p.price)}
+function card(p){let badge=p.on_sale?'<span class="badge sale">SALE</span>':p.new_arrival?'<span class=badge>NEW</span>':p.featured?'<span class=badge>FEATURED</span>':'';
+return `<div class=card>${badge}<button class=qv title="Quick View" onclick="event.preventDefault();quickview('${p.code}')">👁</button><a href="#/p/${p.code}"><div class=img>${thumb(p)}</div><b>${p.name}</b><div class=mu>${CAT_LABEL[p.cat]||p.cat} · ${PU[p.purity]}</div><div style="margin:6px 0">${priceBlock(p)}</div></a><div class=mu>${p.stock?'In stock':'Out of stock'}</div><div style="display:flex;gap:6px;margin-top:8px"><button class="btn s" onclick="wish('${p.code}')">${wl.includes(p.code)?'♥':'♡'}</button><button class="btn s g" onclick="add('${p.code}')" ${p.stock?'':'disabled'}>Add to Cart</button></div></div>`}
+function wish(c){wl=wl.includes(c)?wl.filter(x=>x!=c):[...wl,c];sv();render()}
+function add(c,n=1){cart[c]=Math.min(pd(c).stock,(cart[c]||0)+n);sv();hdr();toast('Added to cart')}
+function quickview(c){let p=pd(c);qvbox.innerHTML=`<div class=modal onclick="if(event.target==this)qvbox.innerHTML=''"><div><span class=close onclick="qvbox.innerHTML=''">✕</span><div class=two><div class="img" style="font-size:90px">${thumb(p)}</div><div><h3>${p.name}</h3><div class=mu>${CAT_LABEL[p.cat]||p.cat} · ${PU[p.purity]} · ${p.weight} g</div><p>${priceBlock(p)}</p><div class=f><button class=btn onclick="wish('${p.code}')">♡ Wishlist</button><button class="btn g" onclick="add('${p.code}');qvbox.innerHTML=''">Add to Cart</button></div><a href="#/p/${p.code}" onclick="qvbox.innerHTML=''"><u>View full details</u></a></div></div></div></div>`}
+function chart(k,n){let h=(H[k]||[]).slice(-n),v=h.map(x=>x.price),mn=Math.min(...v),mx=Math.max(...v),pt=v.map((y,i)=>`${10+i*580/(v.length-1)},${140-(y-mn)/(mx-mn||1)*120}`).join(' '),up=v[v.length-1]>=v[0];return`<svg viewBox="0 0 600 160" style="width:100%"><polyline points="${pt}" fill="none" stroke="${up?'#2e8b57':'#c0392b'}" stroke-width="2.5"/><text x="10" y="12" font-size="11" fill="currentColor">${fmt(mx)}</text><text x="10" y="156" font-size="11" fill="currentColor">${fmt(mn)}</text></svg><div class="${up?'up':'dn'}">${up?'▲':'▼'} ${fmt(v[v.length-1]-v[0])} in ${n} days</div>`}
+const rates=()=>`<div class=grid>${['24','22','18','S'].map(k=>`<div class=card><div class=mu>${PU[k]}</div><h3>${fmt(R[k])} <small class=mu>per gram</small></h3></div>`).join('')}</div><p class=mu>Updated: ${new Date(UPD).toLocaleString()}</p>`;
+const pbox=()=>`<div class=f>${['24','22','18','S'].map(k=>`<button class="btn s ${ck==k?'g':''}" onclick="ck='${k}';render()">${PU[k]}</button>`).join('')}${[7,30].map(n=>`<button class="btn s ${cn==n?'g':''}" onclick="cn=${n};render()">${n} days</button>`).join('')}</div>${chart(ck,cn)}`;
+const need=()=>`<div class=box>Please login first.</div>`+V.acct();
+const tot=()=>{let s=0;for(let c in cart)s+=pd(c).price*cart[c];let disc=coupon=='FIRST500'?Math.min(500,s):0;let d=(s-disc)&&(s-disc)<25000?500:0;return {s,disc,d,t:s-disc+d}};
+const V={
+home:()=>`<div class=hero><div style="color:var(--au);letter-spacing:4px">TIMELESS ELEGANCE</div><h1>Jewellery Crafted<br>for Every Moment</h1><a class="btn g" href="#/shop/all">SHOP COLLECTION</a>
+<div class=coupon>🎁 Use code <b>FIRST500</b> for ₹500 off your first order <button class="btn s" style="padding:3px 10px" onclick="navigator.clipboard&&navigator.clipboard.writeText('FIRST500');toast('Coupon code copied')">Copy</button></div></div>
+<h2 class=sec>Explore Collection</h2><div class=grid style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">${['gold','silver','diamond','gemstone'].map(c=>`<a class="card sec" style="margin:0;padding:50px 10px;font-size:24px" href="#/shop/${c}">${CAT_LABEL[c]}</a>`).join('')}</div><div style="text-align:center;margin-top:12px"><a class=btn href="#/categories">Browse All 20 Categories</a></div>
+<h2 class=sec>New Arrivals & Offers</h2><div class=grid>${P.filter(p=>p.new_arrival||p.on_sale).slice(0,4).map(card).join('')||'<p class=mu>None right now.</p>'}</div><div style="text-align:center;margin-top:12px"><a class=btn href="#/offers">View All New & Offers</a></div>
+<h2 class=sec>Signature Collection</h2><div class=grid>${P.filter(p=>p.featured).slice(0,4).map(card).join('')}</div>
+<h2 class=sec>Shop For</h2><div class=grid style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">${[['wedding','Wedding / Bridal'],['gifting','Gifting'],['mens',"Men's Jewellery"],['kids','Kids Jewellery'],['daily','Daily Wear']].map(c=>`<a class="card sec" style="margin:0;padding:30px 10px;font-size:16px" href="#/shop/${c[0]}">${c[1]}</a>`).join('')}</div>
+<h2 class=sec>Today's Metal Rates</h2>${rates()}<div class=box>${pbox()}</div>
+<div class=hero style="margin:40px 0;padding:50px 20px"><h2>Digital Gold / Investment</h2><p>Book Gold. Build Your Balance. Redeem it later for jewellery.</p><a class="btn g" href="#/book">BOOK GOLD</a></div>
+<div class=hero style="margin:40px 0;padding:50px 20px;background:linear-gradient(135deg,var(--burg),var(--ch))"><h2>Customize Your Order</h2><p>Have a design in mind? Tell our jewellers and we'll craft it for you.</p><a class="btn g" href="#/customize">CUSTOMIZE NOW</a></div>
+<h2 class=sec>Why AURA JEWELLS</h2><div class=why><div class=card>Transparent Pricing</div><div class=card>Secure Shopping</div><div class=card>Premium Jewellery</div><div class=card>Easy Gold Booking</div><div class=card>Customer Service</div><div class=card>Appointment Booking</div></div>`,
+offers:()=>{let na=P.filter(p=>p.new_arrival),sale=P.filter(p=>p.on_sale);return `<h2>New Arrivals & Offers</h2><div class=mu style="margin-bottom:16px">Fresh pieces and limited-time sale prices.</div>
+<h3>🆕 New Arrivals</h3><div class=grid>${na.map(card).join('')||'<p class=mu>No new arrivals right now.</p>'}</div>
+<h3 style="margin-top:30px">🏷️ On Sale</h3><div class=grid>${sale.map(card).join('')||'<p class=mu>No active offers right now.</p>'}</div>`},
+prices:()=>`<h2>Live Metal Prices</h2>${rates()}<div class=box>${pbox()}</div>`,
+shop:a=>{F.cat=a||'all';let C=catByKey(F.cat);let ty=[...new Set(P.map(p=>p.type))];return`<h2>${C.label}</h2><div class=mu>Home / Jewellery / ${C.label} · <a href="#/categories"><u>Browse all categories</u></a></div><div class=f style="margin-top:12px"><input placeholder="Search" value="${F.q}" oninput="F.q=this.value;grid()"><select onchange="F.type=this.value;grid()"><option value="">All types</option>${ty.map(t=>`<option ${F.type==t?'selected':''}>${t}</option>`)}</select><select onchange="F.pr=this.value;grid()"><option value="">Any price</option><option value=1>Under ₹10,000</option><option value=2>₹10,000–₹50,000</option><option value=3>₹50,000–₹1,00,000</option><option value=4>Above ₹1,00,000</option></select><select onchange="F.st=this.value;grid()"><option value="">Availability</option><option value=in>In stock</option><option value=out>Out of stock</option></select><select onchange="F.so=this.value;grid()"><option value="">Featured</option><option value=l>Price: Low to High</option><option value=h>Price: High to Low</option><option value=n>New Arrivals</option></select></div><div class=grid id=g></div>`},
+categories:()=>`<h2>Shop by Category</h2><div class=mu style="margin-bottom:16px">Browse all ${CATS.length} jewellery categories — every category has at least 10 pieces.</div><div class=grid style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">${CATS.map(c=>`<a class="card sec" style="margin:0;padding:34px 10px;font-size:16px" href="#/shop/${c.k}">${c.label}</a>`).join('')}</div>`,
+customize:()=>`<h2>Customize Your Order</h2><p class=mu>Tell us what you have in mind — our jewellers will get in touch to design it with you.</p><div class="box form"><input id=cun placeholder="Full name" value="${U?U.name:''}"><input id=cue placeholder="Email" value="${U?U.email:''}"><input id=cum placeholder="Mobile" value="${U?U.mobile:''}"><select id=cuc><option value="">Category</option>${['Ring','Necklace','Earrings','Bracelet','Bangle','Chain','Anklet','Bridal Set','Other'].map(c=>`<option>${c}</option>`).join('')}</select><select id=cmt><option value="">Preferred metal</option><option>Gold</option><option>Silver</option><option>Diamond</option><option>Gemstone</option></select><input id=cub placeholder="Budget (approx ₹)"><textarea id=cud rows=4 placeholder="Describe your design — style, stone, occasion, reference images, etc."></textarea><button class="btn g" onclick="run(async()=>{let r=await api('custom-order',{name:cun.value,email:cue.value,mobile:cum.value,category:cuc.value,metal:cmt.value,budget:cub.value,details:cud.value});toast('Request sent! Ref: '+r.id);cud.value=''})">Submit Request</button></div>`,
+p:c=>{let p=pd(c);if(!p)return'<p>Not found.</p>';let extra=p.cat=='diamond'?`<tr><td>Carat</td><td>${p.carat||'-'}</td></tr><tr><td>Cut</td><td>${p.cut||'-'}</td></tr><tr><td>Clarity</td><td>${p.clarity||'-'}</td></tr><tr><td>Colour</td><td>${p.colour||'-'}</td></tr><tr><td>Certificate</td><td>${p.certificate||'-'}</td></tr>`:p.cat=='gemstone'&&p.carat?`<tr><td>Carat</td><td>${p.carat}</td></tr>`:'';
+return`<div class=two><div><div class="img" style="font-size:120px">${thumb(p)}</div><div class=thumbs><div class=img>${thumb(p)}</div><div class=img>${IC[p.type]||'💎'}</div></div></div><div><h2>${p.name}</h2><p class=mu>Code ${p.code} · ${CAT_LABEL[p.cat]||p.cat} ${p.type} · ${PU[p.purity]} · ${p.weight} g</p><p>${p.description||''}</p><p>${p.stock?p.stock+' in stock':'Out of stock'}</p>
+<table><tr><td>Rate (${PU[p.purity]})</td><td>${fmt(p.rate)}/g</td></tr><tr><td>Metal value (${p.weight} g)</td><td>${fmt(p.val)}</td></tr><tr><td>Making charges</td><td>${fmt(p.making)}</td></tr><tr><td>Stone/gemstone/diamond charges</td><td>${fmt(p.stone)}</td></tr>${extra}<tr><td>Tax 3%</td><td>${fmt(p.tax)}</td></tr><tr><th>${p.on_sale?'Original Price':'Final Price'}</th><th>${fmt(p.original)}</th></tr>${p.on_sale?`<tr><th>Sale Price</th><th class=salep>${fmt(p.price)}</th></tr>`:''}</table>
+<div class=f style="margin-top:14px"><input id=qt type=number min=1 value=1 style="width:70px"><button class=btn onclick="wish('${p.code}')">♡ Wishlist</button><button class="btn g" onclick="add('${p.code}',+qt.value)">Add to Cart</button><button class=btn onclick="add('${p.code}',+qt.value);location.hash='#/cart'">Buy Now</button></div></div></div>`},
+wish:()=>`<h2>Wishlist</h2>${wl.length?`<div class=grid>${wl.map(c=>card(pd(c))).join('')}</div>`:'<p>No saved items.</p>'}`,
+cart:()=>{let k=Object.keys(cart);if(!k.length)return'<h2>Cart</h2><p>Empty. <a href="#/shop/all"><u>Continue shopping</u></a></p>';let t=tot();return`<h2>Shopping Cart</h2><div class=box><table>${k.map(c=>{let p=pd(c);return`<tr><td>${IC[p.type]} ${p.name}</td><td>${fmt(p.price)}</td><td><button class="btn s" onclick="qty('${c}',-1)">−</button> ${cart[c]} <button class="btn s" onclick="qty('${c}',1)">+</button></td><td>${fmt(p.price*cart[c])}</td><td><button class="btn s" onclick="delete cart['${c}'];sv();render()">✕</button></td></tr>`}).join('')}</table>
+<div class=f style="margin-top:10px"><input id=cp placeholder="Coupon code" value="${coupon}"><button class="btn s" onclick="coupon=cp.value.trim().toUpperCase();render()">Apply</button></div>
+<p>Subtotal ${fmt(t.s)} (tax included)${t.disc?`<br>Coupon discount (FIRST500) −${fmt(t.disc)}`:''}<br>Delivery ${t.d?fmt(t.d):'Free'}<br><b>Total ${fmt(t.t)}</b></p><a class=btn href="#/shop/all">Continue shopping</a> <a class="btn g" href="#/checkout">Checkout</a></div>`},
+checkout:()=>{if(!U)return need();let t=tot();return`<h2>Checkout</h2><div class="box form"><input id=nm value="${U.name}"><input id=mo value="${U.mobile}"><input id=em value="${U.email}"><input id=ad placeholder="Address"><input id=ci placeholder="City"><input id=sta placeholder="State"><input id=pin placeholder="Pincode"><select id=pm><option>Cash on Delivery</option><option>Demo online payment</option></select>${t.disc?`<p class=mu>Coupon FIRST500 applied: −${fmt(t.disc)}</p>`:''}<b>Total ${fmt(t.t)}</b><button class="btn g" onclick="place()">Place Order</button></div>`},
+orders:async()=>{if(!U)return need();let o=await api('orders',null,'GET');return`<h2>My Orders</h2><div class=box><table><tr><th>Order</th><th>Date</th><th>Amount</th><th>Payment</th><th>Status</th></tr>${o.map(x=>`<tr><td>${x.id}</td><td>${x.created}</td><td>${fmt(x.total)}</td><td>${x.pay_status}</td><td>${x.status}</td></tr>`).join('')||'<tr><td>None yet</td></tr>'}</table></div>`},
+acct:()=>U?`<h2>My Account</h2><div class=box><p><b>${U.name}</b><br>${U.email} · ${U.mobile}<br>Customer ID: <b>${U.cid}</b></p><div class=why><div class=card>Orders<h3>${U.orders}</h3></div><div class=card>Wishlist<h3>${wl.length}</h3></div><div class=card>Gold Balance<h3>${(+U.gold).toFixed(2)} g</h3></div></div><div class=f style="margin-top:14px"><a class=btn href="#/orders">My Orders</a><a class=btn href="#/gold">Gold Account</a><a class=btn href="#/wish">Wishlist</a>${U.admin?'<a class="btn g" href="#/admin">Admin</a>':''}<button class=btn onclick="run(async()=>{await api('logout',{});U=null;location.hash='#/';render()})">Logout</button></div></div>`:`<div class=two><div class="box form"><h3>Login</h3><input id=le placeholder="Email or mobile"><input id=lp type=password placeholder="Password"><button class="btn g" onclick="login()">Login</button><p class=mu>Demo: demo@aura.com / demo123 · <a href="#/forgot"><u>Forgot password?</u></a></p></div><div class="box form"><h3>Register</h3><input id=rn placeholder="Full name"><input id=re placeholder="Email"><input id=rm placeholder="Mobile"><input id=rp type=password placeholder="Password"><input id=rc type=password placeholder="Confirm password"><button class=btn onclick="reg()">Create account</button></div></div>`,
+forgot:()=>`<div class="box form" style="margin:auto"><h3>Forgot Password</h3><p class=mu>Demo only: enter your email and a temporary password is shown here instantly instead of being emailed.</p><input id=fe placeholder="Email"><button class="btn g" onclick="run(async()=>{let r=await api('forgot-password',{email:fe.value});$('#app').querySelector('.form').insertAdjacentHTML('beforeend',\`<p class=up>Temporary password: <b>\${r.temp_password}</b></p>\`)})">Send reset</button><a href="#/acct"><u>Back to login</u></a></div>`,
+book:()=>{if(!U)return need();setTimeout(bv,0);return`<h2>Book Gold (Digital Gold)</h2><div class="box form"><select id=bp onchange="bv()"><option value=24>24K</option><option value=22 selected>22K</option><option value=18>18K</option></select><input id=bq type=number min=0.5 step=0.5 value=10 oninput="bv()"><div id=bo></div><button class="btn g" onclick="bk()">Confirm Booking</button></div>`},
+gold:async()=>{if(!U)return need();let g=await api('gold',null,'GET'),tb=g.bookings.filter(b=>b.status!='Cancelled').reduce((a,b)=>a+b.qty,0),us=g.bookings.reduce((a,b)=>a+b.used,0),T=(h,r)=>`<div class=box><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r||'<tr><td>None</td></tr>'}</table></div>`;return`<h2>My Gold</h2><div class=box><h3>Available Gold: ${g.balance.toFixed(2)} g</h3><p>Total booked ${tb} g · Redeemed ${us} g · Remaining ${(tb-us).toFixed(2)} g</p><a class="btn g" href="#/redeem">Redeem Gold</a></div><h3>Booking History</h3>${T(['ID','Date','Qty','Rate','Value','Status'],g.bookings.map(b=>`<tr><td>${b.id}</td><td>${b.created}</td><td>${b.qty}g ${b.purity}K</td><td>${fmt(b.rate)}</td><td>${fmt(b.val)}</td><td>${b.status}</td></tr>`).join(''))}<h3>Transactions</h3>${T(['Date','Type','Ref','Grams'],g.tx.map(x=>`<tr><td>${x.created}</td><td>${x.type}</td><td>${x.ref}</td><td>${x.grams}</td></tr>`).join(''))}<h3>Redemption History</h3>${T(['ID','Product','Gold','Extra paid','Date','Status'],g.red.map(x=>`<tr><td>${x.id}</td><td>${x.product}</td><td>${x.grams}g</td><td>${fmt(x.extra)}</td><td>${x.created}</td><td>${x.status}</td></tr>`).join(''))}`},
+redeem:()=>{if(!U)return need();return`<h2>Redeem Gold</h2><p>Balance: <b>${(+U.gold).toFixed(2)} g</b></p><div class=grid>${P.filter(p=>p.cat=='gold'&&p.stock).map(p=>`<div class=card><div class=img>${thumb(p)}</div><b>${p.name}</b><div class=mu>Needs ${p.weight} g · ${fmt(p.price)}</div><button class="btn s g" style="margin-top:8px" onclick="rd('${p.code}')">Redeem</button></div>`).join('')}</div>`},
+about:()=>`<h2>About AURA JEWELLS</h2><div class=box><p>AURA JEWELLS is a demonstration luxury jewellery brand built as a college project. It brings together gold, silver, diamond and gemstone jewellery with live metal pricing and a unique Digital Gold Booking system that lets customers build a gold balance over time and redeem it against jewellery.</p><p class=mu>This is a demo system: inventory, prices, and payments are for demonstration only.</p></div>`,
+contact:()=>`<h2>Contact Us</h2><div class=two><div class="box form"><input id=cn placeholder="Your name"><input id=ce placeholder="Your email"><textarea id=cm rows=4 placeholder="Message"></textarea><button class="btn g" onclick="run(async()=>{await api('contact',{name:cn.value,email:ce.value,message:cm.value});toast('Message sent');cn.value=ce.value=cm.value=''})">Send Message</button></div><div class=box><h3>AURA JEWELLS</h3><p>📍 AURA JEWELLS, Mumbai</p><p>📞 9665118022</p><p>✉️ bhavikabhati04@gmail.com</p><p>🕐 11:00 AM – 9:00 PM</p></div></div>`,
+service:()=>`<h2>Customer Service</h2><div class=box><h3>Frequently Asked Questions</h3>
+<details class=faq open><summary>How is the jewellery price calculated?</summary><p>Metal value (weight × live rate) + making charges + stone/diamond/gemstone charges + 3% tax. See the breakdown on every product page.</p></details>
+<details class=faq><summary>What is Digital Gold / Gold Booking?</summary><p>You can book grams of gold at today's rate, build a balance over time, and redeem it later toward jewellery of your choice.</p></details>
+<details class=faq><summary>How do I track my order?</summary><p>Go to My Account → My Orders to see status: Pending, Confirmed, Shipped, Delivered or Cancelled.</p></details>
+<details class=faq><summary>Can I return or exchange jewellery?</summary><p>This is a demo store, so returns are not processed, but in a live store this policy would appear here.</p></details>
+<details class=faq><summary>How do I book a store appointment?</summary><p>Use the <a href="#/appointment"><u>Book Appointment</u></a> page to pick a date and time for an in-store consultation.</p></details>
+</div><div class=box><h3>Still need help?</h3><p>Visit our <a href="#/contact"><u>Contact page</u></a> or email bhavikabhati04@gmail.com · Call 9665118022</p></div>`,
+appointment:()=>`<h2>Book an Appointment</h2><p class=mu>Visit our demo showroom for a personal consultation, sizing, or to view jewellery in person.</p><div class="box form"><input id=apn placeholder="Full name"><input id=ape placeholder="Email"><input id=apm placeholder="Mobile"><input id=apd type=date><select id=apt><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option></select><select id=app><option>General consultation</option><option>Ring sizing</option><option>Gold booking discussion</option><option>Custom order enquiry</option><option>Other</option></select><button class="btn g" onclick="run(async()=>{await api('appointment',{name:apn.value,email:ape.value,mobile:apm.value,pdate:apd.value,ptime:apt.value,purpose:app.value});toast('Appointment requested');apn.value=ape.value=apm.value=apd.value=''})">Request Appointment</button></div>`,
+care:()=>`<h2>Jewellery Care Guide</h2><div class=box>
+<h3>Gold</h3><p>Store separately in a soft cloth pouch. Avoid contact with perfume, lotion and chlorinated water. Clean with a soft brush and mild soapy water, then dry thoroughly.</p>
+<h3>Silver</h3><p>Silver tarnishes naturally — polish regularly with a silver cloth. Store in an airtight pouch with anti-tarnish strips if possible.</p>
+<h3>Diamond</h3><p>Diamonds are hard but can chip on impact. Clean with warm water, mild detergent and a soft brush. Get prongs checked yearly.</p>
+<h3>Gemstones</h3><p>Many gemstones are softer than diamonds — avoid ultrasonic cleaners. Wipe gently with a damp soft cloth after wear.</p>
+<h3>General Tips</h3><p>Remove jewellery before swimming, exercising, or household chores. Get clasps and settings inspected once a year.</p></div>`,
+ringsize:()=>`<h2>Ring Size Guide</h2><div class=box>
+<h3>Measure at Home</h3><p>Wrap a strip of paper or thread around the base of your finger, mark where it overlaps, then measure the length in millimetres and match it to the chart below.</p>
+<table><tr><th>Circumference (mm)</th><th>Approx. Size (India/UK)</th><th>Approx. Size (US)</th></tr>
+<tr><td>49.3</td><td>J</td><td>4.5</td></tr><tr><td>51.0</td><td>L</td><td>5.5</td></tr><tr><td>52.8</td><td>N</td><td>6.5</td></tr>
+<tr><td>54.4</td><td>P</td><td>7.5</td></tr><tr><td>56.0</td><td>R</td><td>8.5</td></tr><tr><td>57.8</td><td>T</td><td>9.5</td></tr>
+<tr><td>59.5</td><td>V</td><td>10.5</td></tr></table>
+<p class=mu style="margin-top:10px">Tip: measure at the end of the day when fingers are largest, and avoid measuring when cold.</p></div>`,
+privacy:()=>`<h2>Privacy Policy</h2><div class=box><p>This demo site stores only the information you enter (account details, cart, orders, gold bookings, appointment and contact requests) to operate the demonstration. No real payment or personal data is processed, and information is not shared with third parties.</p></div>`,
+terms:()=>`<h2>Terms & Conditions</h2><div class=box><p>AURA JEWELLS is a college project and not a real jewellery retailer. All products, prices, gold bookings and coupon codes are simulated for demonstration purposes and carry no real-world monetary value.</p></div>`,
+admin:async()=>{if(!U||!U.admin)return`<div class="box form"><h3>Admin Login</h3><input id=le placeholder="Email"><input id=lp type=password placeholder="Password"><button class="btn g" onclick="login()">Login</button><p class=mu>admin@aura.com / admin123</p></div>`;
+let d=await api('admin/data',null,'GET'),tabs=['dash','products','customers','orders','bookings','redemptions','appointments','customorders','prices','history','messages'],mx=Math.max(1,...d.bycat.map(x=>x.s)),mmx=Math.max(1,...d.monthly.map(x=>x.n));
+const B={
+dash:`<div class=why>${[['Products',P.length],['Customers',d.customers.length],['Orders',d.orders.length],['Sales',fmt(d.sales)],['Gold bookings',d.bookings.length],['Gold booked',d.bookings.reduce((a,b)=>a+b.qty,0)+' g']].map(x=>`<div class=card>${x[0]}<h3>${x[1]}</h3></div>`).join('')}</div>
+<h3 style="margin-top:20px">Sales by Category</h3>${d.bycat.map(x=>`<div>${CAT_LABEL[x.cat]||x.cat}<div style="background:var(--au);height:14px;width:${x.s/mx*100}%"></div>${fmt(x.s)}</div>`).join('')||'No sales yet'}
+<h3 style="margin-top:20px">Monthly Orders</h3>${d.monthly.map(x=>`<div>${x.m}<div style="background:var(--au);height:14px;width:${x.n/mmx*100}%"></div>${x.n} orders</div>`).join('')||'No orders yet'}
+<h3 style="margin-top:20px">Gold Booking Activity</h3><div class=mu>${d.bookings.length} bookings totalling ${d.bookings.reduce((a,b)=>a+b.qty,0)} g, ${d.bookings.reduce((a,b)=>a+b.used,0)} g redeemed so far.</div>`,
+products:`<table><tr><th>Code</th><th>Name</th><th>Price</th><th>Stock</th><th></th></tr>${P.map(p=>`<tr><td>${p.code}</td><td>${p.name}</td><td>${priceBlock(p)}</td><td><input type=number value=${p.stock} style="width:70px" onchange="run(()=>api('admin/stock',{code:'${p.code}',stock:+this.value}))"></td><td><button class="btn s" onclick='editProduct(${JSON.stringify(p).replace(/'/g,"&apos;")})'>Edit</button> <button class="btn s" onclick="run(async()=>{if(confirm('Delete ${p.code}?')){await api('admin/product/${p.code}',null,'DELETE');await load();render()}})">Delete</button></td></tr>`).join('')}</table>
+<h3 style="margin-top:16px" id=pf-title>Add / Edit Product</h3><div class="f" id=pf>${prodForm()}</div>`,
+customers:`<table><tr><th>ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>Gold</th><th>Orders</th></tr>${d.customers.map(c=>`<tr><td>${c.cid}</td><td>${c.name}</td><td>${c.email}</td><td>${c.mobile}</td><td>${(+c.gold).toFixed(2)}g</td><td>${c.orders}</td></tr>`).join('')}</table>`,
+orders:`<table><tr><th>ID</th><th>Cust</th><th>Date</th><th>Amount</th><th>Payment</th><th>Status</th></tr>${d.orders.map(o=>`<tr><td>${o.id}</td><td>${o.cid}</td><td>${o.created}</td><td>${fmt(o.total)}</td><td>${o.pay} (${o.pay_status})</td><td><select onchange="run(()=>api('admin/order',{id:'${o.id}',status:this.value}))">${['Pending','Confirmed','Shipped','Delivered','Cancelled'].map(s=>`<option ${o.status==s?'selected':''}>${s}</option>`)}</select></td></tr>`).join('')||'<tr><td>No orders</td></tr>'}</table>`,
+bookings:`<table><tr><th>ID</th><th>Customer</th><th>Qty</th><th>Rate</th><th>Value</th><th>Date</th><th>Status</th></tr>${d.bookings.map(b=>`<tr><td>${b.id}</td><td>${b.cid} ${b.name}</td><td>${b.qty}g</td><td>${fmt(b.rate)}</td><td>${fmt(b.val)}</td><td>${b.created}</td><td><select onchange="run(()=>api('admin/booking',{id:'${b.id}',status:this.value}))">${['Active','Partially Redeemed','Redeemed','Cancelled'].map(s=>`<option ${b.status==s?'selected':''}>${s}</option>`)}</select></td></tr>`).join('')}</table>`,
+redemptions:`<table><tr><th>ID</th><th>Customer</th><th>Product</th><th>Gold</th><th>Extra</th><th>Date</th><th>Status</th></tr>${d.redemptions.map(r=>`<tr><td>${r.id}</td><td>${r.cid} ${r.name}</td><td>${r.product}</td><td>${r.grams}g</td><td>${fmt(r.extra)}</td><td>${r.created}</td><td>${r.status}</td></tr>`).join('')||'<tr><td>None yet</td></tr>'}</table>`,
+appointments:`<table><tr><th>Name</th><th>Email</th><th>Mobile</th><th>Date</th><th>Time</th><th>Purpose</th></tr>${(d.appointments||[]).map(a=>`<tr><td>${a.name}</td><td>${a.email}</td><td>${a.mobile}</td><td>${a.pdate}</td><td>${a.ptime}</td><td>${a.purpose||''}</td></tr>`).join('')||'<tr><td>None yet</td></tr>'}</table>`,
+customorders:`<table><tr><th>ID</th><th>Name</th><th>Mobile</th><th>Category</th><th>Metal</th><th>Budget</th><th>Details</th><th>Date</th><th>Status</th></tr>${(d.custom_orders||[]).map(c=>`<tr><td>${c.id}</td><td>${c.name}</td><td>${c.mobile}</td><td>${c.category}</td><td>${c.metal||''}</td><td>${c.budget||''}</td><td>${c.details}</td><td>${c.created}</td><td><select onchange="run(()=>api('admin/custom-order',{id:'${c.id}',status:this.value}))">${['Received','In Review','Quoted','Confirmed','Completed','Cancelled'].map(s=>`<option ${c.status==s?'selected':''}>${s}</option>`)}</select></td></tr>`).join('')||'<tr><td>None yet</td></tr>'}</table>`,
+prices:`<div class=form>${['24','22','18','S'].map(k=>`<label>${PU[k]} per g <input id=pr${k} type=number value=${R[k]}></label>`).join('')}<button class="btn g" onclick="run(async()=>{await api('admin/prices',{24:+pr24.value,22:+pr22.value,18:+pr18.value,S:+prS.value});await load();toast('Prices saved to history');render()})">Update prices</button></div>`,
+history:`<table><tr><th>Purity</th><th>Date</th><th>Price</th></tr>${d.history.map(h=>`<tr><td>${PU[h.purity]}</td><td>${h.d}</td><td>${fmt(h.price)}</td></tr>`).join('')}</table>`,
+messages:`<table><tr><th>Name</th><th>Email</th><th>Message</th><th>Date</th></tr>${d.messages.map(m=>`<tr><td>${m.name}</td><td>${m.email}</td><td>${m.message}</td><td>${m.created}</td></tr>`).join('')||'<tr><td>None yet</td></tr>'}</table>`};
+return`<h2>Admin Panel</h2><div class=tabs>${tabs.map(t=>`<button class="btn s ${adm==t?'g':''}" onclick="adm='${t}';render()">${t}</button>`).join('')}</div><div class=box>${B[adm]}</div>`}};
+function prodForm(v){v=v||{};const f=(id,ph,val,type)=>`<input id=${id} placeholder="${ph}" value="${val==null?'':val}" ${type?'type='+type:''} style="width:110px">`;
+return `${f('pcode','Code',v.code||'')}${f('pname','Name',v.name||'')}
+<select id=pcat>${['gold','silver','diamond','gemstone'].map(c=>`<option ${v.cat==c?'selected':''}>${c}</option>`)}</select>
+${f('ptype','Type (ring)',v.type||'')}
+<select id=ppurity>${['22','24','18','S'].map(c=>`<option ${v.purity==c?'selected':''}>${c}</option>`)}</select>
+${f('pweight','Weight g',v.weight,'number')}${f('pmaking','Making ₹',v.making,'number')}${f('pstone','Stone ₹',v.stone,'number')}${f('pstock','Stock',v.stock,'number')}
+${f('pimage','Image URL',v.image||'')}
+${f('pcarat','Carat',v.carat,'number')}${f('pcut','Cut',v.cut||'')}${f('pclarity','Clarity',v.clarity||'')}${f('pcolour','Colour',v.colour||'')}${f('pcert','Certificate',v.certificate||'')}
+<input id=pdesc placeholder="Description" value="${v.description||''}" style="width:220px">
+<label><input id=pfeat type=checkbox ${v.featured?'checked':''}> Featured</label>
+<label><input id=pnew type=checkbox ${v.new_arrival?'checked':''}> New arrival</label>
+<label><input id=psale type=checkbox ${v.on_sale?'checked':''}> On sale</label>
+${f('psaleprice','Sale price ₹',v.sale_price,'number')}
+<label><input id=pwed type=checkbox ${v.wedding?'checked':''}> Wedding/Bridal</label>
+<label><input id=pgift type=checkbox ${v.gifting?'checked':''}> Gifting</label>
+<label><input id=pmens type=checkbox ${v.mens?'checked':''}> Men's</label>
+<label><input id=pkids type=checkbox ${v.kids?'checked':''}> Kids</label>
+<label><input id=pdaily type=checkbox ${v.daily_wear?'checked':''}> Daily Wear</label>
+<button class="btn s g" onclick="saveProduct()">Save Product</button>`}
+function editProduct(p){$('#pf-title').textContent='Edit Product: '+p.code;$('#pf').innerHTML=prodForm(p)}
+const saveProduct=()=>run(async()=>{await api('admin/product',{code:pcode.value,name:pname.value,cat:pcat.value,type:ptype.value,purity:ppurity.value,weight:+pweight.value||0,making:+pmaking.value||0,stone:+pstone.value||0,stock:+pstock.value||0,image:pimage.value,carat:+pcarat.value||null,cut:pcut.value,clarity:pclarity.value,colour:pcolour.value,certificate:pcert.value,description:pdesc.value,featured:pfeat.checked?1:0,new_arrival:pnew.checked?1:0,on_sale:psale.checked?1:0,sale_price:+psaleprice.value||null,wedding:pwed.checked?1:0,gifting:pgift.checked?1:0,mens:pmens.checked?1:0,kids:pkids.checked?1:0,daily_wear:pdaily.checked?1:0});await load();toast('Product saved');render()});
+function qty(c,d){cart[c]+=d;if(cart[c]<1)delete cart[c];sv();render()}
+function grid(){let C=catByKey(F.cat);let l=P.filter(p=>C.f(p)&&(!F.type||p.type==F.type)&&(!F.q||(p.name+p.cat+p.type+PU[p.purity]).toLowerCase().includes(F.q.toLowerCase()))&&(!F.st||(F.st=='in')==!!p.stock)&&(!F.pr||(F.pr==1?p.price<1e4:F.pr==2?p.price>=1e4&&p.price<5e4:F.pr==3?p.price>=5e4&&p.price<1e5:p.price>=1e5)));if(F.so=='l')l.sort((a,b)=>a.price-b.price);if(F.so=='h')l.sort((a,b)=>b.price-a.price);if(F.so=='n')l.sort((a,b)=>(b.new_arrival-a.new_arrival));$('#g').innerHTML=l.map(card).join('')||'No products match.'}
+const place=()=>run(async()=>{let r=await api('orders',{items:Object.keys(cart).map(c=>({code:c,qty:cart[c]})),address:`${ad.value}, ${ci.value}, ${sta.value} - ${pin.value}`,pay:pm.value,coupon:coupon});cart={};coupon='';sv();await load();$('#app').innerHTML=`<div class=box><h2>Order Confirmed ✓</h2><p>Order ID <b>${r.id}</b><br>${r.discount?`Coupon discount: −${fmt(r.discount)}<br>`:''}Total ${fmt(r.total)}<br>Payment: ${pm.value}</p><a class=btn href="#/orders">View orders</a></div>`;hdr()});
+const login=()=>run(async()=>{await api('login',{id:le.value,password:lp.value});await load();render()});
+const reg=()=>run(async()=>{await api('register',{name:rn.value,email:re.value,mobile:rm.value,password:rp.value,confirm:rc.value});await load();render()});
+const bv=()=>{if(window.bp)bo.innerHTML=`Rate ${fmt(R[bp.value])}/g<br><b>Booking value ${fmt(bq.value*R[bp.value])}</b>`};
+const bk=()=>run(async()=>{let r=await api('gold/book',{purity:bp.value,qty:bq.value});alert('Booking confirmed! ID: '+r.id);await load();location.hash='#/gold'});
+const rd=c=>run(async()=>{let p=pd(c),use=Math.min(+U.gold,p.weight);if(!confirm(`Gold used: ${use}g\nRemaining: ${(U.gold-use).toFixed(2)}g\nAdditional payable: ${fmt(Math.max(0,p.price-use*p.rate))}\nConfirm?`))return;await api('gold/redeem',{code:c});await load();location.hash='#/gold'});
+function hdr(){$('#cc').textContent=Object.keys(cart).length?' '+Object.keys(cart).length:'';$('#wc').textContent=wl.length?' '+wl.length:'';$('#ac').textContent=U?U.cid:'Account'}
+async function load(){let d=await api('products',null,'GET');P=d.products;R=d.rates;H=d.history;UPD=d.updated;U=(await api('me',null,'GET')).user}
+async function render(){hd.classList.remove('open');qvbox.innerHTML='';let[a,b]=(location.hash.slice(2)||'home').split('/');try{$('#app').innerHTML=await(V[a]||V.home)(b);if(a=='shop')grid()}catch(e){$('#app').innerHTML='<p>'+e+'</p>'}hdr()}
+addEventListener('hashchange',()=>{render();scrollTo(0,0)});
+load().then(render).catch(e=>$('#app').innerHTML='<p>Cannot reach the server. Start it with <code>python app.py</code>.</p>');
+</script></body></html>
