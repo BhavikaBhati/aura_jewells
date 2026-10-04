@@ -252,7 +252,7 @@ def admin_product():
     fields = ('name', 'cat', 'type', 'purity', 'weight', 'making', 'stone', 'stock', 'image',
               'carat', 'cut', 'clarity', 'colour', 'certificate', 'description', 'featured',
               'new_arrival', 'on_sale', 'sale_price', 'wedding', 'gifting', 'mens', 'kids', 'daily_wear')
-    vals = [d.get(f) or None for f in fields]
+    vals = [d.get(f) if d.get(f) not in ('', None) else None for f in fields]
     if exists:
         set_sql = ','.join(f'{f}=%s' for f in fields)
         q(f'UPDATE products SET {set_sql} WHERE code=%s', (*vals, d['code']))
