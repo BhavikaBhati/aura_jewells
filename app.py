@@ -4,7 +4,8 @@ import mysql.connector
 from flask import Flask, request, session, jsonify
 from werkzeug.security import generate_password_hash as gh, check_password_hash as ck
 
-DB = dict(host='acela.proxy.rlwy.net', port=57933, user='root', password='gstQWnTHSPJMFGKKEfZMfXxrfSKKvlhc', database='aura_jewells')
+import os
+DB = dict(host=os.environ['DB_HOST'], port=int(os.environ.get('DB_PORT', '4000')), user=os.environ['DB_USER'], password=os.environ['DB_PASSWORD'], database=os.environ.get('DB_NAME', 'test'), ssl_disabled=False)
 app = Flask(__name__, static_folder='static', static_url_path='')
 app.secret_key = 'aura-demo-secret-change-me'
 app.json.default = str
